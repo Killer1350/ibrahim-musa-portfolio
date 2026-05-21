@@ -28,7 +28,7 @@ if (menuToggle && navLinks) {
   const setMenuOpen = (isOpen) => {
     menuToggle.setAttribute("aria-expanded", String(isOpen));
     navLinks.classList.toggle("is-open", isOpen);
-    menuToggle.querySelector(".sr-only").textContent = isOpen ? "Close menu" : "Open menu";
+    menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
   };
 
   menuToggle.addEventListener("click", () => {
@@ -41,7 +41,7 @@ if (menuToggle && navLinks) {
   });
 
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 680) {
+    if (window.innerWidth > 960) {
       setMenuOpen(false);
     }
   });
