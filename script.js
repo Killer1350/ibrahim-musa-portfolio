@@ -5,7 +5,7 @@ if (year) {
 }
 
 const cards = document.querySelectorAll(
-  ".service-card, .timeline article, .principles article, .proof-bar article"
+  ".work-card, .service-card, .timeline article, .principles article, .proof-bar article"
 );
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector("#primary-navigation");
